@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yulu Communication | Connection Simplified</title>
+    <style>
+        :root {
+            --ocean-blue: #004e92;
+            --cyan: #00f2fe;
+            --dark-blue: #000428;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, var(--dark-blue), var(--ocean-blue));
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 5%;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 50px; /* Adjust based on your logo preference */
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            cursor: pointer;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li:hover {
+            color: var(--cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 5%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Plan Card */
+        .plan-container {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .slider {
+            width: 100%;
+            margin: 20px 0;
+            accent-color: var(--cyan);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--ocean-blue), var(--cyan));
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="yulu_logo.png" alt="Yulu Communication Logo">
+        </div>
+        <ul class="nav-links">
+            <li>Plans</li>
+            <li>eSIM</li>
+            <li>Devices</li>
+            <li>Support</li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Communication without boundaries.</h1>
+        <p>Ultra-fast 5G. Instant activation. No contracts.</p>
+
+        <div class="plan-container">
+            <h3>Build your perfect plan</h3>
+            <p>How much data do you need?</p>
+            <input type="range" min="1" max="100" value="20" class="slider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 20px;">
+                <span>5GB</span>
+                <span style="color: var(--cyan); font-weight: bold;">20GB</span>
+                <span>Unlimited</span>
+            </div>
+            <h2 style="margin: 10px 0;">AED 150 <small style="font-size: 14px; font-weight: normal;">/month</small></h2>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+</body>
+</html>
